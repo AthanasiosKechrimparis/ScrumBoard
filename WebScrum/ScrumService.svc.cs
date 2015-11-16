@@ -11,13 +11,18 @@ namespace WebScrum
     // NOTE: In order to launch WCF Test Client for testing this service, please select ScrumService.svc or ScrumService.svc.cs at the Solution Explorer and start debugging.
     public class ScrumService : IScrumService
     {
+        List<Tasks> BackLogList = new List<Tasks>();
+
         public void AddTask()
         {
         }
 
         public void AddTask(string Name, DateTime StartTime, DateTime EndTime, string TaskOWner, int TaskPoints)
         {
-            throw new NotImplementedException();
+            Tasks NewTask = new Tasks(Name, StartTime, EndTime, TaskOWner, TaskPoints);
+
+            BackLogList.Add(NewTask);
+
         }
 
         public List<Tasks> MoveTasks(List<Tasks> fromList, List<Tasks> toList)
