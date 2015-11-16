@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Web.UI.WebControls;
 
 namespace WebScrum
 {
@@ -34,6 +35,21 @@ namespace WebScrum
         public void DeleteTasks(string UnitTask)
         {
             throw new NotImplementedException();
+        }
+
+
+        public void MoveTasksListBox(ListBox fromList, ListBox toList)
+        {
+            for (int i = 0; i < fromList.Items.Count; i++)
+            {
+                if (fromList.Items[i].Selected)
+                {
+                    toList.Items.Add(fromList.SelectedItem);
+                    fromList.Items.Remove(fromList.Items[i]);
+                }
+            }
+            fromList.SelectedIndex = -1;
+            toList.SelectedIndex = -1;
         }
     }
 }

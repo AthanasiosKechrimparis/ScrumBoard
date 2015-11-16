@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Web.UI.WebControls;
 
 namespace WebScrum
 {
@@ -16,6 +17,8 @@ namespace WebScrum
 
         [OperationContract]
         List<Tasks> MoveTasks(List<Tasks> fromList,List<Tasks>toList);
+        [OperationContract]
+        void MoveTasksListBox(ListBox fromList, ListBox toList);
 
         [OperationContract]
         void DeleteTasks(string UnitTask);

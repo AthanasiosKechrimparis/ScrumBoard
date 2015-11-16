@@ -24,16 +24,7 @@ namespace WebScrum
 
         public void TransferList(ListBox from, ListBox To)
         {
-            for (int i = 0; i < from.Items.Count; i++)
-            {
-                if (from.Items[i].Selected)
-                {
-                    To.Items.Add(from.SelectedItem);
-                    from.Items.Remove(from.Items[i]);
-                }
-            }
-            from.SelectedIndex = -1;
-            To.SelectedIndex = -1;
+            
         }
     }
 }

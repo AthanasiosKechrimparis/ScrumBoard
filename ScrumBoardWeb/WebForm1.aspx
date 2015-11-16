@@ -15,8 +15,10 @@
         <asp:Label ID="Label2" runat="server" Text="To Do"></asp:Label>
     
     </div>
-        <asp:ListBox ID="lsBox1" runat="server"></asp:ListBox>
-        <asp:ListBox ID="lsbox2" runat="server"></asp:ListBox>
+        <asp:ListBox ID="lsBox1" runat="server" Height="64px" Width="74px">
+            <asp:ListItem>Test</asp:ListItem>
+        </asp:ListBox>
+        <asp:ListBox ID="lsbox2" runat="server" Height="65px" Width="83px"></asp:ListBox>
 
         <div>
 
