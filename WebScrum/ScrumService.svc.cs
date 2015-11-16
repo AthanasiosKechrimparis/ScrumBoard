@@ -15,7 +15,7 @@ namespace WebScrum
         {
         }
 
-        public void AddTask(Tasks Task)
+        public void AddTask(string Name, DateTime StartTime, DateTime EndTime, string TaskOWner, int TaskPoints)
         {
             throw new NotImplementedException();
         }

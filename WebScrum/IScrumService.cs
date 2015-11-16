@@ -12,7 +12,7 @@ namespace WebScrum
     public interface IScrumService
     {
         [OperationContract]
-        void AddTask(Tasks Task);
+        void AddTask(string Name, DateTime StartTime, DateTime EndTime, string TaskOWner, int TaskPoints);
 
         [OperationContract]
         List<Tasks> MoveTasks(List<Tasks> fromList,List<Tasks>toList);
